@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run with DD agent" type="JetRunConfigurationType">
+    <envs>
+      <env name="DD_INTEGRATION_KOTLIN_COROUTINE_EXPERIMENTAL_ENABLED" value="true" />
+      <env name="DD_SERVICE" value="kotlin-coroutines-datadog-tracing" />
+      <env name="DD_TRACE_DEBUG" value="false" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="dev.monosoul.coroutines.tracing.TheAppKt" />
+    <module name="kotlin-coroutines-datadog-tracing.main" />
+    <shortenClasspath name="ARGS_FILE" />
+    <option name="VM_PARAMETERS" value="-javaagent:./build/libs/dd-java-agent.jar" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
