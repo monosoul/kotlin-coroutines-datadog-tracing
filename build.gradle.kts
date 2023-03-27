@@ -60,7 +60,9 @@ tasks {
         classpath = startScripts.get().classpath
 
         defaultJvmOpts = listOf(
-            "-javaagent:${buildDir}/libs/dd-java-agent.jar"
+            "-javaagent:${buildDir}/libs/dd-java-agent.jar",
+            "-Ddd.integration.kotlin_coroutine.experimental.enabled=true",
+            "-Ddd.service=kotlin-coroutines-datadog-tracing",
         )
     }
 
